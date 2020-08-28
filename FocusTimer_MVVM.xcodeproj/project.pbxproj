@@ -10,9 +10,25 @@
 		9707B5F224F6E1A400A5F1C6 /* TaskTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9707B5F124F6E1A400A5F1C6 /* TaskTimer.storyboard */; };
 		9707B5F424F6E1B700A5F1C6 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9707B5F324F6E1B700A5F1C6 /* TaskList.storyboard */; };
 		9707B5F624F6E1C200A5F1C6 /* TaskSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9707B5F524F6E1C200A5F1C6 /* TaskSettings.storyboard */; };
+		9707B5FE24F6ED0D00A5F1C6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B5FD24F6ED0D00A5F1C6 /* TimerViewController.swift */; };
+		9707B60024F6ED2400A5F1C6 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B5FF24F6ED2400A5F1C6 /* ListTableViewController.swift */; };
+		9707B60224F6ED3900A5F1C6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60124F6ED3900A5F1C6 /* ListTableViewCell.swift */; };
+		9707B60424F6ED4D00A5F1C6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60324F6ED4D00A5F1C6 /* SettingsTableViewController.swift */; };
+		9707B60624F6F0F700A5F1C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9707B60524F6F0F700A5F1C6 /* Default-568h@2x.png */; };
+		9707B60924F780B500A5F1C6 /* UserDefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60824F780B500A5F1C6 /* UserDefManager.swift */; };
+		9707B60B24F7941900A5F1C6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60A24F7941900A5F1C6 /* MainTabBarController.swift */; };
+		9707B60E24F7F6BC00A5F1C6 /* FirstLaunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60D24F7F6BC00A5F1C6 /* FirstLaunchManager.swift */; };
+		9707B61024F7F82A00A5F1C6 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B60F24F7F82A00A5F1C6 /* ColorManager.swift */; };
+		9707B61324F7FFF300A5F1C6 /* AppDelegate+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61224F7FFF300A5F1C6 /* AppDelegate+Design.swift */; };
+		9707B61524F81FF100A5F1C6 /* Timer+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61424F81FF000A5F1C6 /* Timer+Design.swift */; };
+		9707B61724F8201F00A5F1C6 /* List+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61624F8201F00A5F1C6 /* List+Design.swift */; };
+		9707B61924F8206400A5F1C6 /* ListCell+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61824F8206400A5F1C6 /* ListCell+Design.swift */; };
+		9707B61B24F8208E00A5F1C6 /* Settings+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61A24F8208E00A5F1C6 /* Settings+Design.swift */; };
+		9707B61D24F8301900A5F1C6 /* SettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61C24F8301900A5F1C6 /* SettingsViewModelProtocol.swift */; };
+		9707B61F24F8302700A5F1C6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707B61E24F8302700A5F1C6 /* SettingsViewModel.swift */; };
+		9720B56624F96DA20060EF11 /* Settings+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720B56524F96DA20060EF11 /* Settings+TextField.swift */; };
 		974763C024F6C0300074B5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974763BF24F6C0300074B5E9 /* AppDelegate.swift */; };
 		974763C224F6C0300074B5E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974763C124F6C0300074B5E9 /* SceneDelegate.swift */; };
-		974763C424F6C0300074B5E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974763C324F6C0300074B5E9 /* ViewController.swift */; };
 		974763C724F6C0300074B5E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974763C524F6C0300074B5E9 /* Main.storyboard */; };
 		974763CA24F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 974763C824F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodeld */; };
 		974763CC24F6C0320074B5E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974763CB24F6C0320074B5E9 /* Assets.xcassets */; };
@@ -23,10 +39,26 @@
 		9707B5F124F6E1A400A5F1C6 /* TaskTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTimer.storyboard; sourceTree = "<group>"; };
 		9707B5F324F6E1B700A5F1C6 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		9707B5F524F6E1C200A5F1C6 /* TaskSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskSettings.storyboard; sourceTree = "<group>"; };
+		9707B5FD24F6ED0D00A5F1C6 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		9707B5FF24F6ED2400A5F1C6 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		9707B60124F6ED3900A5F1C6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		9707B60324F6ED4D00A5F1C6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		9707B60524F6F0F700A5F1C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9707B60824F780B500A5F1C6 /* UserDefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefManager.swift; sourceTree = "<group>"; };
+		9707B60A24F7941900A5F1C6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9707B60D24F7F6BC00A5F1C6 /* FirstLaunchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchManager.swift; sourceTree = "<group>"; };
+		9707B60F24F7F82A00A5F1C6 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		9707B61224F7FFF300A5F1C6 /* AppDelegate+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Design.swift"; sourceTree = "<group>"; };
+		9707B61424F81FF000A5F1C6 /* Timer+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+Design.swift"; sourceTree = "<group>"; };
+		9707B61624F8201F00A5F1C6 /* List+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Design.swift"; sourceTree = "<group>"; };
+		9707B61824F8206400A5F1C6 /* ListCell+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListCell+Design.swift"; sourceTree = "<group>"; };
+		9707B61A24F8208E00A5F1C6 /* Settings+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Design.swift"; sourceTree = "<group>"; };
+		9707B61C24F8301900A5F1C6 /* SettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelProtocol.swift; sourceTree = "<group>"; };
+		9707B61E24F8302700A5F1C6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		9720B56524F96DA20060EF11 /* Settings+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+TextField.swift"; sourceTree = "<group>"; };
 		974763BC24F6C0300074B5E9 /* FocusTimer_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusTimer_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974763BF24F6C0300074B5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		974763C124F6C0300074B5E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		974763C324F6C0300074B5E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		974763C624F6C0300074B5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974763C924F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FocusTimer_MVVM.xcdatamodel; sourceTree = "<group>"; };
 		974763CB24F6C0320074B5E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +77,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9707B5F724F6EC3D00A5F1C6 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				9707B60524F6F0F700A5F1C6 /* Default-568h@2x.png */,
+				974763BF24F6C0300074B5E9 /* AppDelegate.swift */,
+				974763C124F6C0300074B5E9 /* SceneDelegate.swift */,
+				974763CB24F6C0320074B5E9 /* Assets.xcassets */,
+				974763D024F6C0320074B5E9 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		9707B5F824F6EC5800A5F1C6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				974763C824F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		9707B5F924F6EC8B00A5F1C6 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				9707B5FD24F6ED0D00A5F1C6 /* TimerViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		9707B5FA24F6EC9D00A5F1C6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9707B5FF24F6ED2400A5F1C6 /* ListTableViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		9707B5FB24F6ECAC00A5F1C6 /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				9707B60124F6ED3900A5F1C6 /* ListTableViewCell.swift */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		9707B5FC24F6ECCE00A5F1C6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9707B60324F6ED4D00A5F1C6 /* SettingsTableViewController.swift */,
+				9707B61C24F8301900A5F1C6 /* SettingsViewModelProtocol.swift */,
+				9707B61E24F8302700A5F1C6 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9707B60724F7809800A5F1C6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9707B60824F780B500A5F1C6 /* UserDefManager.swift */,
+				9707B60D24F7F6BC00A5F1C6 /* FirstLaunchManager.swift */,
+				9707B60F24F7F82A00A5F1C6 /* ColorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9707B60C24F7941E00A5F1C6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9707B60A24F7941900A5F1C6 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		9707B61124F7FFDC00A5F1C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9707B61224F7FFF300A5F1C6 /* AppDelegate+Design.swift */,
+				9707B61424F81FF000A5F1C6 /* Timer+Design.swift */,
+				9707B61624F8201F00A5F1C6 /* List+Design.swift */,
+				9707B61824F8206400A5F1C6 /* ListCell+Design.swift */,
+				9707B61A24F8208E00A5F1C6 /* Settings+Design.swift */,
+				9720B56524F96DA20060EF11 /* Settings+TextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9707B62024F8CE8700A5F1C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		974763B324F6C0300074B5E9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +188,17 @@
 		974763BE24F6C0300074B5E9 /* FocusTimer_MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				974763BF24F6C0300074B5E9 /* AppDelegate.swift */,
-				974763C124F6C0300074B5E9 /* SceneDelegate.swift */,
-				974763C324F6C0300074B5E9 /* ViewController.swift */,
+				9707B62024F8CE8700A5F1C6 /* Model */,
+				9707B60C24F7941E00A5F1C6 /* TabBar */,
+				9707B5F924F6EC8B00A5F1C6 /* Timer */,
+				9707B5FA24F6EC9D00A5F1C6 /* List */,
+				9707B5FB24F6ECAC00A5F1C6 /* ListCell */,
+				9707B5FC24F6ECCE00A5F1C6 /* Settings */,
+				9707B60724F7809800A5F1C6 /* Managers */,
+				9707B61124F7FFDC00A5F1C6 /* Extensions */,
 				974763D624F6C0C50074B5E9 /* Storyboards */,
-				974763CB24F6C0320074B5E9 /* Assets.xcassets */,
-				974763CD24F6C0320074B5E9 /* LaunchScreen.storyboard */,
-				974763D024F6C0320074B5E9 /* Info.plist */,
-				974763C824F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodeld */,
+				9707B5F724F6EC3D00A5F1C6 /* Supporting */,
+				9707B5F824F6EC5800A5F1C6 /* CoreData */,
 			);
 			path = FocusTimer_MVVM;
 			sourceTree = "<group>";
@@ -79,6 +206,7 @@
 		974763D624F6C0C50074B5E9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				974763CD24F6C0320074B5E9 /* LaunchScreen.storyboard */,
 				974763C524F6C0300074B5E9 /* Main.storyboard */,
 				9707B5F124F6E1A400A5F1C6 /* TaskTimer.storyboard */,
 				9707B5F324F6E1B700A5F1C6 /* TaskList.storyboard */,
@@ -150,6 +278,7 @@
 				974763CC24F6C0320074B5E9 /* Assets.xcassets in Resources */,
 				9707B5F424F6E1B700A5F1C6 /* TaskList.storyboard in Resources */,
 				974763C724F6C0300074B5E9 /* Main.storyboard in Resources */,
+				9707B60624F6F0F700A5F1C6 /* Default-568h@2x.png in Resources */,
 				9707B5F224F6E1A400A5F1C6 /* TaskTimer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,10 +290,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974763C424F6C0300074B5E9 /* ViewController.swift in Sources */,
+				9707B60924F780B500A5F1C6 /* UserDefManager.swift in Sources */,
+				9720B56624F96DA20060EF11 /* Settings+TextField.swift in Sources */,
+				9707B5FE24F6ED0D00A5F1C6 /* TimerViewController.swift in Sources */,
+				9707B61724F8201F00A5F1C6 /* List+Design.swift in Sources */,
+				9707B60B24F7941900A5F1C6 /* MainTabBarController.swift in Sources */,
+				9707B61D24F8301900A5F1C6 /* SettingsViewModelProtocol.swift in Sources */,
+				9707B60E24F7F6BC00A5F1C6 /* FirstLaunchManager.swift in Sources */,
+				9707B61324F7FFF300A5F1C6 /* AppDelegate+Design.swift in Sources */,
+				9707B61B24F8208E00A5F1C6 /* Settings+Design.swift in Sources */,
+				9707B61924F8206400A5F1C6 /* ListCell+Design.swift in Sources */,
+				9707B61024F7F82A00A5F1C6 /* ColorManager.swift in Sources */,
 				974763C024F6C0300074B5E9 /* AppDelegate.swift in Sources */,
 				974763CA24F6C0300074B5E9 /* FocusTimer_MVVM.xcdatamodeld in Sources */,
+				9707B60024F6ED2400A5F1C6 /* ListTableViewController.swift in Sources */,
 				974763C224F6C0300074B5E9 /* SceneDelegate.swift in Sources */,
+				9707B60224F6ED3900A5F1C6 /* ListTableViewCell.swift in Sources */,
+				9707B60424F6ED4D00A5F1C6 /* SettingsTableViewController.swift in Sources */,
+				9707B61524F81FF100A5F1C6 /* Timer+Design.swift in Sources */,
+				9707B61F24F8302700A5F1C6 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3H58KDA5;
-				INFOPLIST_FILE = FocusTimer_MVVM/Info.plist;
+				INFOPLIST_FILE = FocusTimer_MVVM/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3H58KDA5;
-				INFOPLIST_FILE = FocusTimer_MVVM/Info.plist;
+				INFOPLIST_FILE = FocusTimer_MVVM/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

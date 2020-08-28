@@ -7,45 +7,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timer-->
         <scene sceneID="TnH-7I-4pk">
             <objects>
-                <viewController id="hhQ-AO-hVm" sceneMemberID="viewController">
+                <viewController id="hhQ-AO-hVm" customClass="TimerViewController" customModule="FocusTimer_MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5iU-qC-0A2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5af-jy-hoK">
-                                <rect key="frame" x="20" y="79" width="280" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5af-jy-hoK">
+                                <rect key="frame" x="20" y="79" width="280" height="28"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="currentTaskEditing:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="XJl-fK-Jv6"/>
+                                    <action selector="currentTaskEditingDidBegin:" destination="hhQ-AO-hVm" eventType="editingDidBegin" id="AHu-3y-Lgt"/>
+                                    <action selector="currentTaskEditingDidEnd:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="ctk-BH-2F0"/>
+                                    <action selector="currentTaskEndEditing:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="FSH-Dg-uSz"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-qN-dLc">
-                                <rect key="frame" x="26" y="218.5" width="268" height="191"/>
+                                <rect key="frame" x="32" y="218.5" width="256" height="191"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-Dk-edv">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="112"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="100"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-43-kCc">
-                                        <rect key="frame" x="0.0" y="152" width="268" height="39"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-43-kCc">
+                                        <rect key="frame" x="0.0" y="152" width="256" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5u-in-kgG">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="39"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
                                                 <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="startButtonAction:" destination="hhQ-AO-hVm" eventType="touchUpInside" id="lJt-27-E77"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="338-ec-iQN">
-                                                <rect key="frame" x="106" y="0.0" width="56" height="39"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="79" height="39"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
                                                 <state key="normal" title="Pause"/>
+                                                <connections>
+                                                    <action selector="pauseButtonAction:" destination="hhQ-AO-hVm" eventType="touchUpInside" id="n1u-42-Kt6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-72-rTp">
-                                                <rect key="frame" x="212" y="0.0" width="56" height="39"/>
+                                                <rect key="frame" x="177.5" y="0.0" width="78.5" height="39"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
                                                 <state key="normal" title="Skip"/>
+                                                <connections>
+                                                    <action selector="skipButtonAction:" destination="hhQ-AO-hVm" eventType="touchUpInside" id="crk-DL-KzA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -62,7 +77,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0CL-kc-wos"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bEi-fw-w8T"/>
+                    <navigationItem key="navigationItem" title="Timer" id="bEi-fw-w8T"/>
+                    <connections>
+                        <outlet property="currentTaskTextField" destination="5af-jy-hoK" id="PHU-Xz-0Wo"/>
+                        <outlet property="pauseButton" destination="338-ec-iQN" id="iAH-BL-70d"/>
+                        <outlet property="skipButton" destination="NQp-72-rTp" id="i8B-XW-9db"/>
+                        <outlet property="startButton" destination="Z5u-in-kgG" id="MFR-Rg-fAW"/>
+                        <outlet property="timelabel" destination="9Pe-Dk-edv" id="DPQ-mx-aTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8S-qb-kiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
