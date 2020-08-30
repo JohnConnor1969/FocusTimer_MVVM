@@ -12,19 +12,11 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var taskTitle: UILabel!
     @IBOutlet var taskIntervalCounter: UILabel!
-    
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var viewModel: ListCellViewModelProtocol! {
+        didSet {
+            taskTitle.text = viewModel.title
+            taskIntervalCounter.text = "\(viewModel.counter)"
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    
-
 }

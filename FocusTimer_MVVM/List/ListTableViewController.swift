@@ -9,36 +9,61 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    private var viewModel: ListViewModelProtocol!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel = ListViewModel()
+        viewModel.getTasks()
 
         setUpTaskListUI()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return viewModel.numberOfRows() ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
+        
+        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        cell.viewModel = cellViewModel
+        cell.setUpTaskCellUI()
 
         return cell
     }
-    */
+    
     
     // MARK: - Functions
+    
+    @IBAction func addNewTaskAction(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Add new task", message: "Enter task", preferredStyle: .alert)
+        
+        let save = UIAlertAction(title: "Save", style: .default) { action in
+            
+            let tf = alert.textFields?.first
+            if let newTaskTitle = tf?.text {
+                self.viewModel.addNewTask(title: newTaskTitle)
+                self.tableView.reloadData()
+            }
+        }
+        
+        alert.addTextField { _ in }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in })
+        
+        alert.addAction(save)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
+    }
     
     
     /*

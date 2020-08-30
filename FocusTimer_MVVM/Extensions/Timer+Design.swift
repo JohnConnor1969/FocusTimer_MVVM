@@ -13,6 +13,8 @@ extension TimerViewController {
         
         let currentColorScheme = ColorManager.shared.returnColorScheme()
         
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: ColorManager.shared.lightGray ]
+        
         view.backgroundColor = ColorManager.shared.darkGray
         
         timelabel.textColor = currentColorScheme

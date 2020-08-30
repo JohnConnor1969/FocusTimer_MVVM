@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class FirstLaunchManager {
     
@@ -30,11 +31,10 @@ class FirstLaunchManager {
     func setValueForFirstLaunch() {
         
         // Создаем Default task
-        /*
-        guard let entity = NSEntityDescription.entity(forEntityName: "Task", in: context)
+        guard let entity = NSEntityDescription.entity(forEntityName: "TaskEntity", in: context)
             else { return }
         
-        let taskObject = Task(entity: entity, insertInto: context)
+        let taskObject = TaskEntity(entity: entity, insertInto: context)
         
         taskObject.title = "Default task"
         taskObject.counter = 0
@@ -43,7 +43,9 @@ class FirstLaunchManager {
         } catch let error as NSError {
             print (error.localizedDescription)
         }
- */
+        
+        
+ 
         
         // Создаем первоначальные ключи и настройки
         // Не оптимальное решение - реализовать на enum
@@ -52,11 +54,9 @@ class FirstLaunchManager {
         UserDefManager.shared.saveIntValue(value: 8, key: "workInterval")
         UserDefManager.shared.saveIntValue(value: 3, key: "breakInterval")
         UserDefManager.shared.saveStringValue(value: "green", key: "colorScheme")
-        
-        
-        
+        UserDefManager.shared.saveStringValue(value: "Default task", key: "lastTask")
+
         UserDefaults.standard.set(true, forKey: "isWorkIntervalType")
-        UserDefaults.standard.set("Default task", forKey: "lastTask")
         
 
     }

@@ -10,6 +10,8 @@ import Foundation
 
 extension SettingsTableViewController {
     func setUpSettingsUI() {
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: ColorManager.shared.lightGray ]
+        
         tableView.backgroundColor = ColorManager.shared.darkGray
         
         workIntervalLabel.textColor = ColorManager.shared.lightGray

@@ -6,12 +6,14 @@
 //  Copyright © 2020 Valeriy Pokatilo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension ListTableViewController {
     func setUpTaskListUI() {
         tableView.rowHeight = 45
 
         view.backgroundColor = ColorManager.shared.darkGray
+        
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: ColorManager.shared.lightGray ]
     }
 }
