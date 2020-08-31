@@ -46,4 +46,20 @@ class UserDefManager {
             return 0
         }
     }
+    
+    // MARK: - Bool
+
+    func saveBoolValue(value: Bool, key: String) {
+        
+        defaults.set(value, forKey: key)
+    }
+    
+    func readBoolValue(key: String) -> Bool {
+        
+        if let interval = defaults.value(forKey: key) as? Bool {
+            return interval
+        } else {
+            return true
+        }
+    }
 }

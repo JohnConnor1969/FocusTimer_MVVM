@@ -36,6 +36,12 @@ class ListViewModel: ListViewModelProtocol {
         tasks.insert(Task(title: title, counter: 0), at: 0)
     }
 
-    
+    func deleteTask(indexPath: IndexPath) {
+        let tasksEntity = DataManager.shared.getTasks()
+
+        DataManager.shared.deleteTask(taskEntity: tasksEntity[indexPath.row])
+        
+        tasks.remove(at: indexPath.row)
+    }
     
 }

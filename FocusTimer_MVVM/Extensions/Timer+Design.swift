@@ -11,6 +11,8 @@ extension TimerViewController {
     
     func setUpTaskTimerUI() {
         
+        currentTaskTextField.text = UserDefManager.shared.readStringValue(for: "lastTask")
+        
         let currentColorScheme = ColorManager.shared.returnColorScheme()
         
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: ColorManager.shared.lightGray ]
@@ -22,9 +24,9 @@ extension TimerViewController {
         currentTaskTextField.backgroundColor = ColorManager.shared.darkGray
         currentTaskTextField.textColor = currentColorScheme
         
-        if let lastTask = UserDefaults.standard.value(forKey: "lastTask") as? String {
-            currentTaskTextField.text = lastTask
-        }
+        //if let lastTask = UserDefaults.standard.value(forKey: "lastTask") as? String {
+        //    currentTaskTextField.text = lastTask
+        //}
         
         startButton.backgroundColor = ColorManager.shared.darkGray
         startButton.layer.borderWidth = 2

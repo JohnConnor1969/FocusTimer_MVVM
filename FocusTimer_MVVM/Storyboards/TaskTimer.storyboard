@@ -15,17 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5af-jy-hoK">
-                                <rect key="frame" x="20" y="79" width="280" height="28"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="currentTaskEditing:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="XJl-fK-Jv6"/>
-                                    <action selector="currentTaskEditingDidBegin:" destination="hhQ-AO-hVm" eventType="editingDidBegin" id="AHu-3y-Lgt"/>
-                                    <action selector="currentTaskEditingDidEnd:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="ctk-BH-2F0"/>
-                                    <action selector="currentTaskEndEditing:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="FSH-Dg-uSz"/>
-                                </connections>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-qN-dLc">
                                 <rect key="frame" x="32" y="218.5" width="256" height="191"/>
                                 <subviews>
@@ -66,20 +55,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siR-GA-CeG">
+                                <rect key="frame" x="30" y="69" width="260" height="28"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="currentTaskBeginEditing:" destination="hhQ-AO-hVm" eventType="editingDidBegin" id="B8I-zn-7Hb"/>
+                                    <action selector="currentTaskEndEditing:" destination="hhQ-AO-hVm" eventType="editingDidEnd" id="ynu-b9-HHq"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5af-jy-hoK" firstAttribute="leading" secondItem="0CL-kc-wos" secondAttribute="leading" constant="20" id="7Zx-Gt-WXt"/>
-                            <constraint firstItem="5af-jy-hoK" firstAttribute="top" secondItem="0CL-kc-wos" secondAttribute="top" constant="35" id="BDM-Zi-Dcg"/>
+                            <constraint firstItem="siR-GA-CeG" firstAttribute="top" secondItem="0CL-kc-wos" secondAttribute="top" constant="25" id="Bd9-ZA-MBq"/>
                             <constraint firstItem="Ju6-qN-dLc" firstAttribute="centerX" secondItem="5iU-qC-0A2" secondAttribute="centerX" id="SdL-I3-98K"/>
-                            <constraint firstItem="0CL-kc-wos" firstAttribute="trailing" secondItem="5af-jy-hoK" secondAttribute="trailing" constant="20" id="UdD-Is-AnI"/>
+                            <constraint firstItem="0CL-kc-wos" firstAttribute="trailing" secondItem="siR-GA-CeG" secondAttribute="trailing" constant="30" id="TaH-pS-q6H"/>
+                            <constraint firstItem="siR-GA-CeG" firstAttribute="leading" secondItem="0CL-kc-wos" secondAttribute="leading" constant="30" id="Xle-Dy-FyP"/>
                             <constraint firstItem="Ju6-qN-dLc" firstAttribute="centerY" secondItem="5iU-qC-0A2" secondAttribute="centerY" constant="30" id="dZ0-An-vnO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0CL-kc-wos"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="bEi-fw-w8T"/>
                     <connections>
-                        <outlet property="currentTaskTextField" destination="5af-jy-hoK" id="PHU-Xz-0Wo"/>
+                        <outlet property="currentTaskTextField" destination="siR-GA-CeG" id="xKw-zP-PsM"/>
                         <outlet property="pauseButton" destination="338-ec-iQN" id="iAH-BL-70d"/>
                         <outlet property="skipButton" destination="NQp-72-rTp" id="i8B-XW-9db"/>
                         <outlet property="startButton" destination="Z5u-in-kgG" id="MFR-Rg-fAW"/>

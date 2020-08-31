@@ -36,7 +36,7 @@ class FirstLaunchManager {
         
         let taskObject = TaskEntity(entity: entity, insertInto: context)
         
-        taskObject.title = "Default task"
+        taskObject.title = "Default task 000"
         taskObject.counter = 0
         do {
             try context.save()
@@ -54,10 +54,7 @@ class FirstLaunchManager {
         UserDefManager.shared.saveIntValue(value: 8, key: "workInterval")
         UserDefManager.shared.saveIntValue(value: 3, key: "breakInterval")
         UserDefManager.shared.saveStringValue(value: "green", key: "colorScheme")
-        UserDefManager.shared.saveStringValue(value: "Default task", key: "lastTask")
-
-        UserDefaults.standard.set(true, forKey: "isWorkIntervalType")
-        
-
+        UserDefManager.shared.saveStringValue(value: "Default task 000", key: "lastTask")
+        UserDefManager.shared.saveBoolValue(value: true, key: "isWorkIntervalType")
     }
 }

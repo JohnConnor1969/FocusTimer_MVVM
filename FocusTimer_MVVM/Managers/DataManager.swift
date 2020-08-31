@@ -46,4 +46,44 @@ class DataManager {
             print (error.localizedDescription)
         }
     }
+    
+    func deleteTask(taskEntity: TaskEntity) {
+        context.delete(taskEntity)
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print (error.localizedDescription)
+        }
+        
+        //tasks.remove(at: indexPath.row)
+        //tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        //taskArray = createTaskArray()
+    }
+    
+    func counterIncrease(title: String) {
+        
+        var taskPlus: TaskEntity!
+        
+        let fetchRequest: NSFetchRequest<TaskEntity> = TaskEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "title = %@", title)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            taskPlus = results.first
+            //insertDataFrom(selectedCar: car!)
+        } catch let error as NSError {
+            print(error.localizedDescription )
+        }
+        
+        //taskPlus.title = title
+        taskPlus.counter += 1
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+ 
+    }
 }

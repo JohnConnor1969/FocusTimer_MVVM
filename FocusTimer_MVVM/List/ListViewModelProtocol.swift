@@ -15,4 +15,5 @@ protocol ListViewModelProtocol {
     func cellViewModel(forIndexPath indexPath: IndexPath) -> ListCellViewModelProtocol?
     func getTasks()
     func addNewTask(title: String)
+    func deleteTask(indexPath: IndexPath)
 }
