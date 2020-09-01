@@ -9,14 +9,16 @@
 import Foundation
 
 class SettingsViewModel: SettingsViewModelProtocol {
-    func saveInterval(value: Int, type: String) {
+    
+    func readIntValue(key: String) -> Int {
+        UserDefManager.shared.readIntValue(key: key)
+    }
+    
+    func saveIntValue(value: Int, type: String) {
         UserDefManager.shared.saveIntValue(value: value, key: type)
     }
     
     func saveColorScheme(color: String) {
         UserDefManager.shared.saveStringValue(value: color, key: "colorScheme")
     }
-    
-    
-   
 }

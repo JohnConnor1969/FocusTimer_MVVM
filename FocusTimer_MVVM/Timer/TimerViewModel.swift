@@ -41,4 +41,8 @@ class TimerViewModel: TimerViewModelProtocol {
         
         return String(format:"%02i:%02i", minutes, seconds)
     }
+    
+    func readIntValue(key: String) -> Int {
+        UserDefManager.shared.readIntValue(key: key)
+    }
 }

@@ -11,6 +11,7 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     
     // MARK: - Properties
+    
     var workIntervalValue: String!
     var breakIntervalValue: String!
     
@@ -41,8 +42,8 @@ class SettingsTableViewController: UITableViewController {
         addDoneButton(workIntervalTextField)
         addDoneButton(breakIntervalTextField)
         
-        workIntervalTextField.text = String(UserDefManager.shared.readIntValue (key: "workInterval"))
-        breakIntervalTextField.text = String(UserDefManager.shared.readIntValue(key: "breakInterval"))
+        workIntervalTextField.text = String(viewModel.readIntValue(key: "workInterval"))
+        breakIntervalTextField.text = String(viewModel.readIntValue(key: "breakInterval"))
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -79,12 +80,10 @@ class SettingsTableViewController: UITableViewController {
         }
         
         if let newValue = Int(workIntervalTextField.text!), newValue > 0 && newValue < 1000 {
-            //guard let text = workIntervalTextField.text else { return }
-            //guard let newValueInt = Int(text) else { return }
-            viewModel.saveInterval(value: newValue, type: "workInterval")
+            viewModel.saveIntValue(value: newValue, type: "workInterval")
         } else {
             workIntervalTextField.text = workIntervalValue
-            //alert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
+            showAlert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
         }
     }
     
@@ -100,12 +99,10 @@ class SettingsTableViewController: UITableViewController {
         }
         
         if let newValue = Int(breakIntervalTextField.text!), newValue > 0 && newValue < 1000 {
-            //guard let text = breakIntervalTextField.text else { return }
-            //guard let newValueInt = Int(text) else { return }
-            viewModel.saveInterval(value: newValue, type: "breakInterval")
+            viewModel.saveIntValue(value: newValue, type: "breakInterval")
         } else {
             breakIntervalTextField.text = breakIntervalValue
-            //alert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
+            showAlert(title: "Error", message: "Wrong format! Enter number from 1 to 999")
         }
     }
 }

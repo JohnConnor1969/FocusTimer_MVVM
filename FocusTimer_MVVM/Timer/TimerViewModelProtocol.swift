@@ -15,4 +15,5 @@ protocol TimerViewModelProtocol: class {
     func getTasks()
     func counterIncrease(title: String)
     func timeString(time: TimeInterval) -> String
+    func readIntValue(key: String) -> Int
 }

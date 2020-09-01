@@ -10,7 +10,11 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    // MARK: - Property
+    
     private var viewModel: ListViewModelProtocol!
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         setUpTaskListUI()
@@ -31,7 +35,6 @@ class ListTableViewController: UITableViewController {
         return viewModel.numberOfRows() ?? 0
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
         
@@ -51,11 +54,10 @@ class ListTableViewController: UITableViewController {
         if editingStyle == .delete {
             
             if viewModel.numberOfRows() == 1 {
-                //alert(title: "Error", message: "You cannot delete a single task!")
+                 showAlert(title: "Error", message: "You cannot delete a single task!")
             }  else {
                 viewModel.deleteTask(indexPath: indexPath)
                 tableView.deleteRows(at: [indexPath], with: .fade)
-
             }
         }
     }
@@ -83,10 +85,4 @@ class ListTableViewController: UITableViewController {
         
         present(alert, animated: true)
     }
-    
-    
-
-
-
-
 }

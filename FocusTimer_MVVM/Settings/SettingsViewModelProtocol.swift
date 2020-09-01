@@ -10,6 +10,7 @@ import Foundation
 
 protocol SettingsViewModelProtocol {
     
-    func saveInterval(value: Int, type: String)
+    func saveIntValue(value: Int, type: String)
+    func readIntValue(key: String) -> Int
     func saveColorScheme(color: String)
 }

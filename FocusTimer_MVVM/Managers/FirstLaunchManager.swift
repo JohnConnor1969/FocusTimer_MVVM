@@ -30,26 +30,18 @@ class FirstLaunchManager {
     
     func setValueForFirstLaunch() {
         
-        // Создаем Default task
         guard let entity = NSEntityDescription.entity(forEntityName: "TaskEntity", in: context)
             else { return }
         
         let taskObject = TaskEntity(entity: entity, insertInto: context)
         
-        taskObject.title = "Default task 000"
+        taskObject.title = "Default task"
         taskObject.counter = 0
         do {
             try context.save()
         } catch let error as NSError {
             print (error.localizedDescription)
         }
-        
-        
- 
-        
-        // Создаем первоначальные ключи и настройки
-        // Не оптимальное решение - реализовать на enum
-        //UserDefaults.standard.set("work", forKey: "currentIntervalType")
         
         UserDefManager.shared.saveIntValue(value: 8, key: "workInterval")
         UserDefManager.shared.saveIntValue(value: 3, key: "breakInterval")
